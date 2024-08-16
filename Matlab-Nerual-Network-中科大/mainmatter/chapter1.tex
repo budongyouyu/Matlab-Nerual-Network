@@ -1,0 +1,58 @@
+\chapter{前向神经网络}
+
+\section{多层感知机}
+
+\begin{question}
+    设计感知器实现26个英文字母识别网络，实现训练和测试的步骤。训练包括无噪声的理想字母识别网络和含有不同的噪声的识别网络，使得网络具有“理想+噪声”的抗噪能力。在测试步骤中，分别测试在随机加噪声逐步增加的情况下，测试数据为100组的网络的平均误差，与
+    利息那个样本值进行比较，得到不同噪声水平下的误差值，作图进行性能对比。
+\end{question}
+
+\section{BP神经网络设计}
+
+\begin{question}
+    根据$BP$神经网络设计实现模拟控制规则为$T=int\left(\frac{e+ec}{2}\right)$的模糊神经网络控制器，其中输入变量$e$和输出变量$ec$的变化范围分别是
+    \begin{equation}
+        \begin{aligned}
+            & e\sim \{-2,2\}\\
+            & ec\sim \{-2,2\}
+        \end{aligned}
+    \end{equation}
+
+    网络设计目标误差$e_{min}=0.001$，试着给出
+    \begin{enumerate}[itemindent=2em]
+        \item 输入输出矢量以及问题描述；
+        \item 网络结构；
+        \item 学习方法；
+        \item 初始化以及必要的参数选取；
+        \item 最后的结果、循环次数、训练时间，其中着重讨论：
+        \begin{enumerate}[itemindent=2em]
+            \item 不同隐藏层$S1$时的收敛速度和误差精度的对比分析；
+            \item 在$S1$设置为较好的情况下，对固定学习速率$lr$取不同值时的训练时间，其中包括稳定性进行观察比较；
+            \item 采用自适应学习速率，于单一固定的学习速率$lr$中最好的情况进行比较；
+        \end{enumerate}
+        \item 采用插值法选取多余训练时的输入，对所设计网络进行验证，给出验证的$A$与$T$的值。
+    \end{enumerate}
+\end{question}
+
+\section{异或问题}
+
+\begin{question}
+    采用单层感知机的权值训练公式，通过固定隐藏层的目标输出为线性可分矢量，设计一个两层感知机来解决异或问题，隐藏层用两个神经元。
+\end{question}
+
+\vspace*{2em}
+
+\section{线性网络}
+
+\begin{question}
+    设计一个具有单元输入和单元输出的线性网络，注意观察其解的特性
+    \begin{equation}
+        P=1,\ \ \ \ T=0.5
+    \end{equation}
+\end{question}
+
+\section{附加动量法和自适应学习速率技术}
+
+\begin{question}
+    用函数\textsc{trainbpx.m}训练例2.10，并与其他训练方法做比较；
+\end{question}
